@@ -14,7 +14,7 @@
 			<fieldset>
 				<label>Enter your the text you need to make super secret, please: </label>
 				<input type = "text" id = "topSecret" />
-				<input type = "button" value = "Encrypt" onclick = "enigma()" />
+				<input type = "button" value = "Encrypt/Decrypt" onclick = "enigma()" />
 				<label>Super secret, uncrackable text:</label>
 				<input type="text" id="return" />
 			</fieldset>
