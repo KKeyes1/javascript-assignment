@@ -42,28 +42,39 @@ function enigma() {
 		'Y': 'L',
 		'Z': 'M'
 	};
-	/* grabbing the input from the form on the front end by Id and assigning it to a new variable */
+			/* grabbing the input from the form on the front end by Id and assigning it to a new variable */
 	let txtInput = document.getElementById('topSecret').value;
-	/* grabbing the output from the form on the front end by Id and assigning it to a new variable */
+
+			/* grabbing the output from the form on the front end by Id and assigning it to a new variable */
 	let txtOutput = document.getElementById('return');
-	/* changing all of the character of the input string to UPPERCASE because I was too lazy to add another 26 elements to my array... */
+
+			/* changing all of the character of the input string to UPPERCASE because I was too lazy to add another 26 elements to my array... */
 	let upperCase = txtInput.toUpperCase();
-	/* then I replace all of the spaces in the new string with + so that I don't misplace them */
+
+			/* then I replace all of the spaces in the new string with + so that I don't misplace them */
 	let newString = upperCase.replace(/ /g,"+");
-	/* this is how I loop through your top secret text and convert it with my super top secret key */
+
+			/* this is how I loop through your top secret text and convert it with my super top secret key */
 	for(var i = 0; i < newString.length; i++){
-		/* I check if the character you entered is in my super top secret database of characters */
+
+				/* I check if the character you entered is in my super top secret database of characters */
 		if(rot.hasOwnProperty(newString[i])) {
-			/* if it is, I make my super top secret conversion and save it for later */
+
+					/* if it is, I make my super top secret conversion and save it for later */
 			encrypted.push(rot[newString[i]]);
-			/* otherwise, if your character is not in my database */
+
+					/* otherwise, if your character is not in my database */
 		} else {
-			/* then I just leave it there */
+
+					/* then I just leave it there */
 			encrypted.push(newString[i]);
 		}
 	}
+
 	/* finally, I take my new super top secret string that is completely unrecognizable to you and I output it on the front end */
 	txtOutput.value = encrypted.join('');
 }
+
+
 
 
