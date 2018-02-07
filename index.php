@@ -3,23 +3,38 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Javascript Assignment</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 
 		<script type="text/javascript" src="enigma.js"></script>
-		<script type="text/javascript" src="bananagrams.js"></script>
+		<script type="text/javascript" src="anagrams.js"></script>
 	</head>
 	<body>
-		<h1>Enigma</h1>
-		<form action = "">
-			<fieldset>
-				<label>Enter your the text you need to make super secret, please: </label>
-				<input type = "text" id = "topSecret" />
-				<input type = "button" value = "Encrypt/Decrypt" onclick = "enigma()" />
-				<input type = "button" value = "Anagrams" onclick = "bananagrams()" />
-				<label>Super secret, uncrackable text:</label>
-				<input type="text" id="return" />
-			</fieldset>
-		</form>
+		<div class="container">
+			<h1>Javascript Functions</h1>
+			<form onsubmit="return false;" action="">
+				<div class="form-group">
+					<input class="form-control form-control-lg mb-3" type = "text" id = "topSecret" placeholder="INPUT" autofocus />
+					<div class="row center">
+						<div class="col-4">
+							<button class="btn btn-success form-control" role="button" onclick="enigma()">ROT13</button>
+						</div>
+						<div class="col-4">
+							<button class="btn btn-success form-control" role="button" onclick="anagrams()">Anagrams</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<form action="">
+				<div class="form-group">
+					<input class="form-control form-control-lg" type="text" id="return" placeholder="OUTPUT" />
+				</div>
+			</form>
+		</div>
 	</body>
 </html>
